@@ -13,6 +13,9 @@ cache:
 language: node_js
 node_js:
   - "node"
-  - "8"
+before_script:
+  - npm install -g bower
+  - npm install -g polymer-cli
+  - bower i
 script:
 - xvfb-run npm run test-build
